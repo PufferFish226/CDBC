@@ -1,0 +1,31 @@
+{
+  "name": "cdbc",
+  "version": "1.0.0",
+  "description": "CDBC Ethereum Private Chain with Hybrid Model",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "compile": "npx hardhat compile"
+  },
+  "keywords": [
+    "ethereum",
+    "private-chain",
+    "utxo",
+    "hybrid-model",
+    "consensus"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.1.2",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "ethers": "^6.16.0",
+    "hardhat": "^2.27.1"
+  }
+}

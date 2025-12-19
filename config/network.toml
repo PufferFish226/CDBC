@@ -1,0 +1,107 @@
+# CDBC Ethereum Private Chain Network Configuration
+
+[network]
+# Network name
+name = "CDBC Private Chain"
+# Network ID (must match chainId in genesis.json)
+network_id = 1337
+# Chain ID (must match chainId in genesis.json)
+chain_id = 1337
+
+[node1]
+# Node 1 configuration
+name = "Node1"
+# Node data directory
+data_dir = "data/node1"
+# Node RPC configuration
+rpc = {
+    enabled = true,
+    host = "localhost",
+    port = 8545,
+    cors = "*",
+    api = ["eth", "net", "web3", "txpool", "debug"]
+}
+# Node P2P configuration
+p2p = {
+    enabled = true,
+    host = "0.0.0.0",
+    port = 30303,
+    bootnodes = []
+}
+# Node mining configuration (if using mining)
+mining = {
+    enabled = false,
+    coinbase = "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+}
+
+[node2]
+# Node 2 configuration
+name = "Node2"
+data_dir = "data/node2"
+rpc = {
+    enabled = true,
+    host = "localhost",
+    port = 8546,
+    cors = "*",
+    api = ["eth", "net", "web3", "txpool", "debug"]
+}
+p2p = {
+    enabled = true,
+    host = "0.0.0.0",
+    port = 30304,
+    bootnodes = ["enode://Node1EnodeUrl@localhost:30303"]
+}
+mining = {
+    enabled = false,
+    coinbase = "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+
+[node3]
+# Node 3 configuration
+name = "Node3"
+data_dir = "data/node3"
+rpc = {
+    enabled = true,
+    host = "localhost",
+    port = 8547,
+    cors = "*",
+    api = ["eth", "net", "web3", "txpool", "debug"]
+}
+p2p = {
+    enabled = true,
+    host = "0.0.0.0",
+    port = 30305,
+    bootnodes = ["enode://Node1EnodeUrl@localhost:30303"]
+}
+mining = {
+    enabled = false,
+    coinbase = "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+}
+
+[consensus]
+# Consensus algorithm configuration
+type = "POA-PBFT"
+# Block time in seconds
+block_time = 5
+# Number of validators
+validators = 3
+# Quorum requirements
+quorum = 2
+# Epoch length
+epoch = 30000
+
+[genesis]
+# Genesis file path
+genesis_file = "config/genesis.json"
+
+[deploy]
+# Contract deployment configuration
+deployer_address = "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+deploy_gas_limit = "4700000"
+deploy_gas_price = "10000000000"
+
+[monitoring]
+# Monitoring configuration
+enabled = true
+prometheus_port = 9090
+grafana_port = 3000

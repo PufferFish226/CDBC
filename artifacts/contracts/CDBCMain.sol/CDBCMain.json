@@ -1,0 +1,224 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "CDBCMain",
+  "sourceName": "contracts/CDBCMain.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_accessControlAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_utxoAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_regulatoryAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_consensusAddr",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "accessControl",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "utxo",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "regulatory",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "consensus",
+          "type": "address"
+        }
+      ],
+      "name": "ContractsDeployed",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "accessControlAddr",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "consensusAddr",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAccessControl",
+      "outputs": [
+        {
+          "internalType": "contract ICDBCAccessControl",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getConsensus",
+      "outputs": [
+        {
+          "internalType": "contract ICDBCConsensus",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRegulatory",
+      "outputs": [
+        {
+          "internalType": "contract ICDBCRegulatory",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getUTXO",
+      "outputs": [
+        {
+          "internalType": "contract ICDBCUTXO",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "regulatoryAddr",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddr",
+          "type": "address"
+        }
+      ],
+      "name": "updateAccessControlAddr",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddr",
+          "type": "address"
+        }
+      ],
+      "name": "updateConsensusAddr",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddr",
+          "type": "address"
+        }
+      ],
+      "name": "updateRegulatoryAddr",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddr",
+          "type": "address"
+        }
+      ],
+      "name": "updateUTXOAddr",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "utxoAddr",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516104d13803806104d183398101604081905261002f916100e9565b600080546001600160a01b038681166001600160a01b031992831681179093556001805487831690841681179091556002805487841690851681179091556003805493871693909416831790935560408051948552602085019190915283019190915260608201527f4b75aa1a13a160f48feea5d6d4f23760de2ae3e26f90d390b095aa4faa4854859060800160405180910390a15050505061013d565b80516001600160a01b03811681146100e457600080fd5b919050565b600080600080608085870312156100ff57600080fd5b610108856100cd565b9350610116602086016100cd565b9250610124604086016100cd565b9150610132606086016100cd565b905092959194509250565b6103858061014c6000396000f3fe608060405234801561001057600080fd5b50600436106100a45760003560e01c8063017aeae7146100a9578063179e740b146100be57806350509859146100e75780637c9cc57d146100fa57806387c6291b1461010d5780639cb506b614610120578063a95d217d14610133578063cd6feb4b14610146578063d27d284114610159578063ed8f04211461016c578063fae9c8d91461017d578063fc1dad811461018e575b600080fd5b6100bc6100b73660046102d8565b61019f565b005b6003546001600160a01b03165b6040516001600160a01b03909116815260200160405180910390f35b6100bc6100f53660046102d8565b6101f4565b6100bc6101083660046102d8565b610240565b6003546100cb906001600160a01b031681565b6001546100cb906001600160a01b031681565b6002546100cb906001600160a01b031681565b6000546100cb906001600160a01b031681565b6100bc6101673660046102d8565b61028c565b6002546001600160a01b03166100cb565b6001546001600160a01b03166100cb565b6000546001600160a01b03166100cb565b6000546001600160a01b031633146101d25760405162461bcd60e51b81526004016101c990610308565b60405180910390fd5b600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b0316331461021e5760405162461bcd60e51b81526004016101c990610308565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b0316331461026a5760405162461bcd60e51b81526004016101c990610308565b600380546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b031633146102b65760405162461bcd60e51b81526004016101c990610308565b600280546001600160a01b0319166001600160a01b0392909216919091179055565b6000602082840312156102ea57600080fd5b81356001600160a01b038116811461030157600080fd5b9392505050565b60208082526027908201527f4f6e6c792061636365737320636f6e74726f6c20636f6e74726163742063616e6040820152662075706461746560c81b60608201526080019056fea2646970667358221220745fab1f80fc957293134afb5035a37dce1abd636a4d7b509970321627cbb0a064736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100a45760003560e01c8063017aeae7146100a9578063179e740b146100be57806350509859146100e75780637c9cc57d146100fa57806387c6291b1461010d5780639cb506b614610120578063a95d217d14610133578063cd6feb4b14610146578063d27d284114610159578063ed8f04211461016c578063fae9c8d91461017d578063fc1dad811461018e575b600080fd5b6100bc6100b73660046102d8565b61019f565b005b6003546001600160a01b03165b6040516001600160a01b03909116815260200160405180910390f35b6100bc6100f53660046102d8565b6101f4565b6100bc6101083660046102d8565b610240565b6003546100cb906001600160a01b031681565b6001546100cb906001600160a01b031681565b6002546100cb906001600160a01b031681565b6000546100cb906001600160a01b031681565b6100bc6101673660046102d8565b61028c565b6002546001600160a01b03166100cb565b6001546001600160a01b03166100cb565b6000546001600160a01b03166100cb565b6000546001600160a01b031633146101d25760405162461bcd60e51b81526004016101c990610308565b60405180910390fd5b600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b0316331461021e5760405162461bcd60e51b81526004016101c990610308565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b0316331461026a5760405162461bcd60e51b81526004016101c990610308565b600380546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b031633146102b65760405162461bcd60e51b81526004016101c990610308565b600280546001600160a01b0319166001600160a01b0392909216919091179055565b6000602082840312156102ea57600080fd5b81356001600160a01b038116811461030157600080fd5b9392505050565b60208082526027908201527f4f6e6c792061636365737320636f6e74726f6c20636f6e74726163742063616e6040820152662075706461746560c81b60608201526080019056fea2646970667358221220745fab1f80fc957293134afb5035a37dce1abd636a4d7b509970321627cbb0a064736f6c63430008140033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
